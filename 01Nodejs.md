@@ -1018,7 +1018,9 @@ http.createServer((req,res)=>{
 
 ### 查看目录下有哪些文件
 
-​	 `ls`
+​	 `ls` mac系统
+
+​	 `dir` Windows系统
 
 ### npm下载后要保存，需新建package.json
 
