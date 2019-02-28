@@ -1,3 +1,7 @@
+# 全栈
+
+最早指用js的语言从前写到后
+
 # express
 
 - [npm的express文档](https://www.npmjs.com/package/express)
@@ -15,7 +19,9 @@ express其实就是先想用JS语言配合nodejs环境搭建服务器
 |-|-|
 |客户端|服务端|
 |浏览器|服务器|
-|JS,HTML,CSS|PHP(APACHE),JS(NODEJS),JAVA(JDK)|
+|JS,HTML,CSS|PHP(apache),JS(nodejs),JAVA(JDK)|
+
+而前后端的通讯是通过ajax
 
 > http://localhost:3000/index.html?id=1#hash
 
@@ -27,10 +33,19 @@ express其实就是先想用JS语言配合nodejs环境搭建服务器
 也就是浏览器输入不同路径，页面就有不同的返回结果
 ```js
 var express = require('express')
-var app = express()
+var app = express()//实例化一个express的服务器应用
  
+//服务器处理路径为/的get请求
+//处理完成后，将执行后面的回调函数（request请求，response响应）
+//过程中处理前端发过来的请求request（一般是ajax的请求），后端根据需要进行（数据处理、数据库操作、文件读写等）返回对应的结果给前端
+//类比
+//req -> $_GET[] $_POST[]
+//mysql语句
+//res -> echo
+
+//那写nodejs
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('Hello World')//echo 'hello world'
 })
 
 app.get('/home', function (req, res) {

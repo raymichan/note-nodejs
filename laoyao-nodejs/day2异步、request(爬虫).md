@@ -88,7 +88,7 @@ eatMeal().then(buyPizza).then(buyDrink);//吃东西3、买披萨1、买饮料2
 ```
 ## await和async
 
-await和async也是解决异步嵌套的一个方法，它建立在promise的基础上
+await和async也是解决异步嵌套的一个方法，它建立在promise的基础上，取代then
 [promise&&await&&deferred和event loop](https://github.com/Wscats/node-tutorial/issues/12)
 
 ```
